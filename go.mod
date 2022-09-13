@@ -5,6 +5,7 @@ go 1.19
 require (
 	github.com/go-resty/resty/v2 v2.7.0
 	github.com/gofiber/fiber/v2 v2.37.1
+	github.com/joho/godotenv v1.4.0
 	github.com/rs/zerolog v1.28.0
 )
 

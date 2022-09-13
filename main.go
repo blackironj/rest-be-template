@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	env.Init()
 	logger.Init()
 
 	app := server.Init()
