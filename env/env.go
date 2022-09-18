@@ -16,6 +16,9 @@ var (
 	SrvEnv              string
 	SrvPort             string
 	SrvShutdownDeadline time.Duration
+
+	MongoDBUrl  string
+	MongoDBname string
 )
 
 func Init() {
@@ -28,6 +31,9 @@ func Init() {
 	SrvEnv = getEnv("SERVER_ENV", "dev")
 	SrvPort = getEnv("SERVER_PORT", "3000")
 	SrvShutdownDeadline = mustStrToDuration(getEnv("SERVER_SHUTDOWN_DEADLINE_SEC", "30"), time.Second)
+
+	MongoDBUrl = getEnv("MONGO_DB_URL", "mongodb://localhost:27017")
+	MongoDBname = getEnv("MONGO_DB_NAME", "dev")
 }
 
 func getEnv(envName, defaultVal string) string {

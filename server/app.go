@@ -1,12 +1,11 @@
 package server
 
 import (
-	"fmt"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/recover"
 
 	"github.com/blackironj/rest-be-template/env"
+	"github.com/blackironj/rest-be-template/server/controller"
 )
 
 func Init() *fiber.App {
@@ -22,8 +21,5 @@ func Init() *fiber.App {
 }
 
 func addHandler(app *fiber.App) {
-	app.Get("/api/list", func(c *fiber.Ctx) error {
-		fmt.Println("🥉 Last handler")
-		return c.SendString("Hello, World 👋!")
-	})
+	app.Get("/users", controller.GetUser)
 }
