@@ -14,6 +14,7 @@ import (
 // @Tags books
 // @Accept json
 // @Produce json
+// @Param book body model.Book true "Register book"
 // @Success 200 {object} common.ResponseHTTP{}
 // @Failure 400 {object} common.ResponseHTTP{}
 // @Failure 500 {object} common.ResponseHTTP{}
@@ -47,6 +48,7 @@ func RegisterBook(c *fiber.Ctx) error {
 // @Tags books
 // @Accept json
 // @Produce json
+// @Param isbn path string true "Book ISBN code"
 // @Success 200 {object} common.ResponseHTTP{data=model.Book}
 // @Failure 400 {object} common.ResponseHTTP{}
 // @Failure 404 {object} common.ResponseHTTP{}
