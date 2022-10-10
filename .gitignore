@@ -115,6 +115,7 @@ fabric.properties
 *.code-workspace
 
 # swagger docs generated
+docs/docs.go
 docs/swagger*
 
 # executable file
