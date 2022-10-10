@@ -7,13 +7,17 @@ import (
 	repo "github.com/blackironj/rest-be-template/repository"
 )
 
-func GetUserByEmail(email string) *model.User {
+func RegisterBook(book *model.Book) error {
+	return repo.Book().UpsertBook(book)
+}
+
+func GetBookByISBN(isbn string) *model.Book {
 	filter := bson.M{
-		"email": email,
+		"isbn": isbn,
 	}
-	user, err := repo.User().GetSingleUserByFilter(filter)
+	book, err := repo.Book().GetSingleBookByFilter(filter)
 	if err != nil {
 		return nil
 	}
-	return user
+	return book
 }
