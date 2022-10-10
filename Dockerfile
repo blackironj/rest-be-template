@@ -6,6 +6,9 @@ ENV GOBIN /go/bin
 WORKDIR /app
 COPY . .
 
+RUN go install github.com/swaggo/swag/cmd/swag@latest
+RUN swag init
+
 RUN go mod tidy
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -ldflags '-w -s' -o /api-server .
