@@ -1,9 +1,9 @@
 package server
 
 import (
-	"github.com/gofiber/swagger"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/recover"
+	"github.com/gofiber/swagger"
 
 	"github.com/blackironj/rest-be-template/env"
 	"github.com/blackironj/rest-be-template/server/controller"
@@ -26,5 +26,8 @@ func addHandler(app *fiber.App) {
 		app.Get("/docs/*", swagger.HandlerDefault)
 	}
 
-	app.Get("/users", controller.GetUser)
+	bookGroup := app.Group("books")
+
+	bookGroup.Post("", controller.RegisterBook)
+	bookGroup.Get("/:isbn", controller.GetBookByISBN)
 }

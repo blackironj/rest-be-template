@@ -9,15 +9,15 @@ import (
 var (
 	mongoDB *mongo.Database
 
-	userRepo *userRepository
+	bookRepo *bookRepository
 )
 
 func Init() {
 	mongoDB = OpenMongoDB(env.MongoDBUrl, env.MongoDBname)
 
-	userRepo = newUsersRepository(mongoDB)
+	bookRepo = newBooksRepository(mongoDB)
 }
 
-func User() *userRepository {
-	return userRepo
+func Book() *bookRepository {
+	return bookRepo
 }
