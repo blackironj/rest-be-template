@@ -8,7 +8,6 @@ require (
 	github.com/gofiber/swagger v0.1.4
 	github.com/joho/godotenv v1.4.0
 	github.com/rs/zerolog v1.28.0
-	github.com/swaggo/swag v1.8.6
 	go.mongodb.org/mongo-driver v1.10.2
 )
 
@@ -28,6 +27,7 @@ require (
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/swaggo/files v0.0.0-20220728132757-551d4a08d97a // indirect
+	github.com/swaggo/swag v1.8.6 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.40.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
