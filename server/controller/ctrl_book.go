@@ -16,7 +16,7 @@ import (
 // @Produce json
 // @Success 200 {object} common.ResponseHTTP{}
 // @Failure 400 {object} common.ResponseHTTP{}
-// @Failure 404 {object} common.ResponseHTTP{}
+// @Failure 500 {object} common.ResponseHTTP{}
 // @Router /books [post]
 func RegisterBook(c *fiber.Ctx) error {
 	var newBook model.Book
