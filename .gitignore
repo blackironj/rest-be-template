@@ -114,4 +114,10 @@ fabric.properties
 # Ignore code-workspaces
 *.code-workspace
 
+# swagger docs generated
+docs/swagger*
+
+# executable file
+rest-be-template
+rest-be-template.exe
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,jetbrains+all
